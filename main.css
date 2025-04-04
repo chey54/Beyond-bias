@@ -1,0 +1,45 @@
+/* Background gradient */
+body {
+    background: linear-gradient(to bottom, rgb(194, 99, 45), rgb(39, 9, 21));
+    font-family: Arial, serif;
+    color: rgb(247, 218, 189); 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+/* Centered titles */
+#titles {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Speaker sections */
+.speaker {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2); /* Slight transparency */
+    border-radius: 10px;
+}
+
+/* Hide bios initially */
+.bio {
+    display: none; /* Hidden by default */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+/* Button styling */
+button {
+    background-color: rgb(194, 99, 45);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(170, 79, 30);
+}
