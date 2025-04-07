@@ -1,11 +1,26 @@
 /* Background gradient */
 body {
+    min-height: 100vh;
     background: linear-gradient(to bottom, rgb(194, 99, 45), rgb(39, 9, 21));
-    font-family: Arial, serif;
-    color: rgb(247, 218, 189); 
+    font-family: 'Arial', serif;
+    color: rgb(247, 218, 189);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, rgb(194, 99, 45) 0%, rgb(39, 9, 21) 100%);
+    background-attachment: fixed;
 }
+
+
+html, body {
+    height: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
 
 /* Centered titles */
 #titles {
@@ -13,24 +28,35 @@ body {
     margin-bottom: 30px;
 }
 
+h1, h2, h3, h4 {
+    margin: 0.3em 0;
+}
+
 /* Speaker sections */
 .speaker {
     margin-bottom: 20px;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.2); /* Slight transparency */
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-/* Hide bios initially */
+.speaker:hover {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Bio sections */
 .bio {
-    display: none; /* Hidden by default */
+    display: none;
     margin-top: 10px;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 5px;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Button styling */
+/* Toggle button */
 button {
     background-color: rgb(194, 99, 45);
     color: white;
@@ -38,8 +64,40 @@ button {
     padding: 8px 15px;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
     background-color: rgb(170, 79, 30);
+}
+
+/* Links styling */
+a {
+    color: rgb(255, 220, 190);
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(255, 220, 190, 0.6);
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+a:hover {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    .speaker {
+        padding: 10px;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
 }
